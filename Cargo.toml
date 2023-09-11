@@ -7,6 +7,9 @@ description ="kernel development"
 repository ="https://github.com/girishnarayan/kernel.git"
 homepage ="https://github.com/girishnarayan/kernel.git"
 
+[target.arm-poky-linux-gnueabi]
+rustflags = ["-C", "link-arg=-marm", "-C", "link-arg=-march=armv7-a", "-C", "link-arg=-mfpu=neon-vfpv4", "-C", "link-arg=-mfloat-abi=hard"]
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
