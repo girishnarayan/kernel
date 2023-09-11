@@ -1,6 +1,9 @@
 [build]
 target="armv7a-none-eabi"
 
+[build]
+target = "arm-poky-linux-gnueabi"
+
 
 [target.arm-unknown-linux-gnueabihf]
 linker="arm-poky-linux-gnueabi-gcc"
