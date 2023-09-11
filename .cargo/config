@@ -1,0 +1,17 @@
+[build]
+target="armv7-unknown-linux-gnueabihf"
+
+
+[target.arm-unknown-linux-gnueabihf]
+linker="arm-poky-linux-gnueabi-gcc"
+rustflags = [
+"-C", "link-arg=-march=armv7",
+"-C", "link-arg=-mfpu=vfp",
+
+
+"-C", "link-arg=-mfloat-abi=hard",
+"-C", "link-arg=-mtune=cortexa7",
+"-C", "link-arg=-mfpu=vfpv4",
+
+"-C", "link-arg=--sysroot=/home/alpha/build/tmp/work/raspberrypi3-poky-linux-gnueabi/systemd-conf/244.3-r0/recipe-sysroot",
+]
